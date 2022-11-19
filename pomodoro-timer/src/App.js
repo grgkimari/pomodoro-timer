@@ -9,11 +9,16 @@ import mainReducer, {initialState} from './reducers';
 
 function App() {
 
+  
+
   function handleClick (action) {
     dispatch(action)
   }
 
   const[state, dispatch] = useReducer(mainReducer, initialState)
+
+
+
 
   return (
     <div className="App">

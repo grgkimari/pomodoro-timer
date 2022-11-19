@@ -7,7 +7,7 @@ const ValueModifier = (props) => {
         <div className="valueModifier" id = {props.id}>
             <h5 className="valueName">{props.valueName}</h5>
             <button className="modButton increase" onClick={props.id === "session" ? (event) => props.clickHandler( {type : INCREMENT_SESSION_TIME}) : (event) => props.clickHandler( {type : INCREMENT_BREAK_TIME})}> + </button>
-            <div className="value">{props.value}</div>
+            <div className="value">{props.value.toString().padStart(2, "0")}</div>
             <button className="modButton reduce" onClick={props.id === "session" ? (event) => props.clickHandler( {type : DECREMENT_SESSION_TIME}) : (event) => props.clickHandler( {type : DECREMENT_BREAK_TIME})}> - </button>
         </div>
     )
